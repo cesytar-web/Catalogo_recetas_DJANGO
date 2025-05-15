@@ -1,0 +1,19 @@
+<!{% extends 'base.html' %}
+
+{% block title %}Lista de Recetas{% endblock %}
+
+{% block content %}
+    <h1>Lista de Recetas</h1>
+    <ul>
+        {% for receta in recetas %}
+        <li>
+            <a href="{% url 'ver_receta' receta.id %}">{{ receta.nombre }}</a>
+             <a href="{% url 'eliminar_receta' receta.id %}" onclick="return confirm('¿Estás seguro de que deseas eliminar esta receta?')">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_receta' %}">Crear una nueva receta</a>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ receta.nombre }} - Catálogo de Recetas{% endblock %}
+
+{% block content %}
+  <h1>{{ receta.nombre }}</h1>
+
+  <h3>Descripción:</h3>
+  <p>{{ receta.descripcion }}</p>
+
+  <h3>Instrucciones:</h3>
+  <p>{{ receta.instrucciones }}</p>
+
+  <h3>Ingredientes:</h3>
+  {% if receta.ingredientes.all %}
+    <ul>
+      {% for ingrediente in receta.ingredientes.all %}
+        <li>{{ ingrediente.nombre }} - {{ ingrediente.cantidad }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No hay ingredientes registrados.</p>
+  {% endif %}
+
+  <a href="{% url 'listar_recetas' %}">← Volver al listado</a>
+{% endblock %}

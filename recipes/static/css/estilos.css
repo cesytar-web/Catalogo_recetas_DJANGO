@@ -1,0 +1,231 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Cambié la fuente a 'Roboto' para un aspecto más moderno */
+}
+
+/* Fondo general */
+body {
+    background-color: #f4f6f9;
+    color: #495057;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilo para el encabezado */
+header {
+    background: linear-gradient(135deg, #417690, #5b8a92); /* Gradiente ajustado con #417690 */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem; /* Reduje el tamaño del título */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilo para la navegación */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #f39c12;
+    transform: translateY(-3px); /* Agregué un efecto más fuerte al pasar el ratón */
+}
+
+/* Estilo del contenedor principal */
+main {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Estilo del formulario */
+.formulario-receta {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    animation: fadeIn 1s ease-out; /* Animación suave de aparición */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formulario-receta h2 {
+    font-size: 2.5rem;
+    color: #417690; /* Cambié el color del título del formulario a #417690 */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilo de cada campo del formulario */
+.campo-form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 8px;
+}
+
+.campo-form input, 
+.campo-form textarea, 
+.campo-form select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 8px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo-form input:focus, 
+.campo-form textarea:focus, 
+.campo-form select:focus {
+    border-color: #417690; /* Cambié el color del borde al #417690 */
+    box-shadow: 0 0 8px rgba(65, 118, 144, 0.5);
+    outline: none;
+}
+
+/* Estilo de los mensajes de error */
+.campo-form .error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Estilo del botón de enviar */
+button[type="submit"] {
+    background-color: #417690; /* Cambié el color de fondo del botón */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #5b8a92; /* Cambié el color del hover al tono más claro */
+    transform: translateY(-3px);
+}
+
+button[type="submit"]:active {
+    background-color: #396173; /* Cambié el color de activo al tono más oscuro */
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #417690; /* Cambié el color del enlace al #417690 */
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 30px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f39c12;
+}
+
+/* Estilo para las listas de recetas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    color: #417690; /* Cambié el color del texto del enlace al #417690 */
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #f39c12;
+}
+
+ul li a.delete {
+    color: #e74c3c;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul li a.delete:hover {
+    color: #c0392b;
+}
+
+/* Estilo para las secciones de receta */
+h1, h2 {
+    font-size: 2.5rem;
+    color: #417690; /* Cambié el color del título de las recetas al #417690 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para las descripciones de las recetas */
+h3 {
+    font-size: 1.5rem;
+    color: #417690; /* Cambié el color de los subtítulos a #417690 */
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el título "Catálogo de Recetas" */
+header h1 {
+    color: #f5dd5d; /* Cambié el color del título a #f5dd5d */
+    font-size: 2.8rem; /* Reduje un poco el tamaño de la fuente */
+}
